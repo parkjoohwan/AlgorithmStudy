@@ -1,31 +1,33 @@
-	#include <iostream>
-	#include <vector>
-	#include <queue>
-	#include <ctime>
-#include <cstdlib>
+#include<iostream>
+#include<algorithm>
+using namespace std;
 
-	using namespace std;
+bool sosoo(int n) {
+	if (n == 1) return false;
+	for (int i = 2; i < n; i++)
+		if (n%i == 0) return false;
+	return true;
+}
 
-	int checker(vector<int> item, int num, int total);
-
-	void main() {
-
-		int N, S;
-		vector<int> item;
-		int cnt;
-
-		cin >> N >> S;
-
-		for (int i = 0; i < N ; i++) {
-			int t;
-			cin >> t;
-			item.push_back(t);
-		}
-
-		int cnt = checker(0, 0);
-
-		cout << cnt << endl;
-
-		system("pause");
-
+int counter(int n) {
+	int cnt=0;
+	for (int i = n+1; i <= 2 * n; i++) {
+		if (sosoo(i)) cnt++;
 	}
+
+	return cnt;
+}
+
+
+int main(void) {
+	
+	while (true) {
+		int a;
+		cin >> a;
+		if (a == 0) break;
+
+		cout << counter(a) << endl;
+	}
+
+	return 0;
+}
