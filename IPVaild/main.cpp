@@ -1,21 +1,3 @@
-/* This is from the BIND 4.9.4 release, modified to compile by itself */
-
-/* Copyright (c) 1996 by Internet Software Consortium.
-*
-* Permission to use, copy, modify, and distribute this software for any
-* purpose with or without fee is hereby granted, provided that the above
-* copyright notice and this permission notice appear in all copies.
-*
-* THE SOFTWARE IS PROVIDED "AS IS" AND INTERNET SOFTWARE CONSORTIUM DISCLAIMS
-* ALL WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
-* OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL INTERNET SOFTWARE
-* CONSORTIUM BE LIABLE FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL
-* DAMAGES OR ANY DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR
-* PROFITS, WHETHER IN AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS
-* ACTION, ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS
-* SOFTWARE.
-*/
-
 #if defined(LIBC_SCCS) && !defined(lint)
 static char rcsid[] = "$Id: inet_pton.c,v 8.6 1996/06/26 23:17:26 vixie Exp $";
 #endif /* LIBC_SCCS and not lint */
@@ -25,7 +7,6 @@ static char rcsid[] = "$Id: inet_pton.c,v 8.6 1996/06/26 23:17:26 vixie Exp $";
 #include <iostream>
 
 using namespace std;
-
 #define	IN6ADDRSZ	16
 #define	INADDRSZ	 4
 #define	INT16SZ		 2
@@ -55,8 +36,8 @@ static int	inet_pton6(const char *src);
 */
 int
 inet_pton(
-int af,
-const char *src)
+	int af,
+	const char *src)
 {
 	switch (af) {
 	case 0:
@@ -216,8 +197,8 @@ inet_pton6(const char *src)
 }
 
 int main() {
-	
-	
+
+
 	cout << inet_pton(1, "1111::1111") << endl;
 
 
