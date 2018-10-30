@@ -1,17 +1,14 @@
-#include <cstdio>
+#include <iostream>
 
-using namespace std;
 
+int test[5] = { 1,1,1,1,1 };
+
+int num(const int* map) {
+	map = test;
+	return 100;
+}
 
 int main() {
+	num(test);
 
-	int* a;
-	double* b;
-
-
-	printf("%d\n", sizeof(a));
-	printf("%d\n", sizeof(b));
-
-
-	return 0;
 }

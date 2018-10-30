@@ -1,21 +1,24 @@
 #include <iostream>
 #include <string>
-#include <sstream>
-#include <vector>
 
 using namespace std;
 
 int main() {
-	string str;
-	int temp;
-	vector<string> num;
+	string a, b;
+	cin >> a >> b;
 
-	getline(cin, str);
-
-	for (stringstream sts(str); (sts >> temp);) {
-		num.push_back(temp);
+	string ta, tb;
+	for (int i = 2; i >= 0; i--) {
+		ta += a.at(i);
+		tb += b.at(i);
 	}
 
-	cout << word.size() << endl;
+	if (ta > tb)
+		cout << ta;
+	else
+		cout << tb;
 
+
+
+	return 0;
 }
