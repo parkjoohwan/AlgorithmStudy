@@ -1,42 +1,25 @@
-#include <string>
-#include <vector>
 #include <iostream>
+#include <vector>
+#include <algorithm>
+
 using namespace std;
-
-char d[5] = { 'a','i','e','o','u' };
-
 int main() {
-	string in;
-	cin >> in;
 
-	vector<int> idx;
-
-	string out;
-	for (int i = 0; i < in.length(); i++) {
-		for (int j = 0; j < 5; j++) {
-			if (in.at(i) == d[j])
-			{
-				idx.push_back(i);
-			}
-		}	
-	}
-
+	vector<int> test(5);
 	
-	int f = 0, b = idx.size()-1;
-	int chkf = idx[f], chkb = idx[b];
-	for (int i = 0; i < in.length(); i++) {
-		if (i != chkf) {
-			out += in.at(i);
-		}
-		else {
-			out += in.at(chkb);
-			f++; b--;
-			if(f<idx.size() && b >= 0)
-			chkf = idx[f];
-			chkb = idx[b];
-		}
+	for (int i = 0; i < 5; i++) {
+		test[i] = i + 1;
 	}
 
-	cout << out;
+	cout << test[0] << endl;
 
+	test.
+
+	cout << test[0] << endl;
+
+
+	system("pause");
+
+
+	return 0;
 }
